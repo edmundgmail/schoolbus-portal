@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {SqlSnippetsComponent} from './sql-snippets/sql-snippets.component';
+import {UserSignInComponent} from "./user-sign-in/user-sign-in.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: SqlSnippetsComponent
+    component: UserSignInComponent
   },
   {
     path: 'dashboard',

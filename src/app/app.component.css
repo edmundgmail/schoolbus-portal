@@ -39,3 +39,18 @@ example-container {
   width: 100%;
 }
 
+.center{
+  width: 40%;
+  margin: 10px auto;
+}
+
+.main-div{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+}
+
+.example-full-width{
+  width:100%
+}

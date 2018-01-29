@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormBuilder, FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RoutingModule } from './routing.module';
@@ -13,20 +13,24 @@ import { InMemoryDataService } from './services/in-memory-data.service';
 import { SqlSnippetsComponent } from './sql-snippets/sql-snippets.component';
 import { TabsComponent } from './tabs/tabs.component';
 import {
-  MatButtonModule, MatCardModule, MatCheckboxModule, MatDialogModule, MatIconModule, MatInputModule, MatListModule,
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule,
+  MatListModule,
   MatMenuModule,
   MatSelectModule,
   MatSidenavModule,
   MatSlideToggleModule, MatTabsModule,
   MatToolbarModule
 } from "@angular/material";
+import {UserSignInComponent} from "./user-sign-in/user-sign-in.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     SqlSnippetsComponent,
-    TabsComponent
+    TabsComponent,
+    UserSignInComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,7 @@ import {
     MatDialogModule,
     MatIconModule,
     MatInputModule,
+    MatFormFieldModule,
     MatListModule,
     MatMenuModule,
     MatSelectModule,
@@ -49,7 +54,7 @@ import {
     MatToolbarModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent],
   entryComponents: []
 })
